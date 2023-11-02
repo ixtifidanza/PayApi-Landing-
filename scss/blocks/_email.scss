@@ -1,0 +1,32 @@
+.email {
+    padding: 96px 0;
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-title {
+        color: $main-color;
+        font-family: DM Serif Display;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: -0.369px;
+    }
+    &-input {
+        width: 100%;
+    }
+}
+@media screen and (max-width:975px){
+    .email-block {
+        flex-direction: column;
+    }
+    .email-title {
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width:521px){
+    .email {
+        padding-top: 0;
+    }
+}

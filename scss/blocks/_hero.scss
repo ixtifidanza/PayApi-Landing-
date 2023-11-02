@@ -1,0 +1,130 @@
+.hero {
+    padding-bottom: 120px;
+    &::before {
+        content: "";
+        background-image: url(../img/circle.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        background-position: left;
+        width: 680px;
+        height: 680px;
+        top: 0;
+        right: 0;
+    }
+    &-title {
+       @include mainTitle;
+       max-width: 546px; 
+       font-size: 72px;
+       line-height: 72px;
+    }
+    &-input {
+        margin: 21px 0 16px;
+        max-width: 445px;
+        position: relative;
+       
+        input {
+            padding: 16px 0 16px 27px;
+            border: none;
+            outline: none;
+            width: 100%;
+            display: inline-block;
+            background-color: #FBFCFE;
+            border-radius: 24px;
+            color: $main-color;
+            &::placeholder {
+                font-weight: bold;
+                color: $main-color;
+                opacity: 0.5;
+            }
+
+        }
+    }
+    &-btn {
+        position: absolute;
+        top: 0;
+        right:  0;
+        &:hover {
+            background-color: #DA6D97;
+            transition: ease-in-out  0.2s;
+        }
+
+    }
+
+    &-text {
+        color: $main-color;
+    }
+    &-link {
+        color: #798D9E;
+        font-weight: bold;
+        opacity: 0.5;
+        &:hover {
+            color: #36536B;
+            transition: all linear 0.2s;
+        }
+    }
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-img {
+        z-index: 9;
+        max-width: 450px;
+        &__phone {
+            max-width: 263px;
+            height: 500px;
+        }
+    }
+
+}
+
+@media screen and (max-width:975px){
+    .hero {
+        padding-bottom: 100px;
+    }
+    .hero::before {
+        background-image: url(../img/circle-tablet.svg);
+        background-position: center;
+        width: 949px;
+        height: 949px;
+        width: 100%;
+        top: -75%;
+        
+        
+    }
+    .hero-block {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .hero-content {
+        max-width: 573px;
+        
+    }
+    .hero-title {
+        font-size: 48px;
+        text-align: center;
+    }
+    .hero-input {
+        margin: 21px auto;
+    }
+    .hero-text {
+        text-align: center;
+    }
+}
+@media screen and (max-width:568px){
+
+}
+@media screen and (max-width:521px){
+    .hero-btn {
+        position: static;
+        display: block;
+        width: 100%;
+        max-width: 527px;
+        margin-top: 15px;
+    } 
+    .hero-input {
+        display: flex;
+        flex-direction: column;
+    }
+}

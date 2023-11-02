@@ -1,0 +1,56 @@
+.service {
+    padding: 146px 0;
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    &-item {
+        max-width: 350px;
+        &::before {
+            content: "";
+            background-image: url(../img/cash.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            width: 106px;
+            height: 106px;
+            margin: 0 auto;
+        }
+        &:nth-child(2)::before {
+            background-image: url(../img/banking.svg);
+        }
+        &:nth-child(3)::before {
+            background-image: url(../img/pay.svg);
+        }
+        &__title {
+            color: $main-color;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: -0.138px;
+            margin: 32px 0 16px;
+        }
+        &__text {
+            color: #6C8294;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px; 
+            letter-spacing: -0.115px;
+        }
+    }
+}
+@media screen and (max-width:975px){
+    .service-block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:568px){
+    .service-item {
+        margin-top: 48px;
+    }
+}

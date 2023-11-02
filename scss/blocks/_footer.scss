@@ -1,0 +1,36 @@
+.footer {
+    padding: 31px 0;
+    background-color: #1B262F;
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        &__link {
+            color: #798D9E;
+            font-size: 15px;
+            font-weight: 700;
+            &:hover {
+                color: #fff;
+                transition: all linear 0.2s;
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+}
+@media screen and (max-width:568px){
+    .footer-block {
+        flex-direction: column;
+    }
+    .footer-social {
+        margin-top: 20px;
+    }
+}
